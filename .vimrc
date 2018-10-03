@@ -20,6 +20,13 @@ if dein#load_state('~/.vim/bundles')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   
+  call dein#add('itchyny/lightline.vim')
+  " let g:lightline = { 'colorscheme': 'challenger_deep' }
+  
+  call dein#add('mhinz/vim-startify')
+  call dein#add('mhinz/vim-signify')
+  call dein#add('mhinz/vim-rfc')
+
   " Required:
   call dein#end()
   call dein#save_state()
@@ -38,3 +45,20 @@ endif
 
 " NASM
 au BufRead,BufNewFile *.asm set filetype=nasm
+
+" Python
+au BufNewFile,BufRead *.py
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
+    \ set shiftwidth=4 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix |
+    \ set encoding=utf-8
+
+" Statusline customization
+set noshowmode
+
+" Lines
+set number
